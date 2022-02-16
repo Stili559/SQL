@@ -1,6 +1,0 @@
-select top(50)EmployeeID, FirstName,LastName, d.Name
-from Employees AS e
-join Departments AS d
-on d.DepartmentID = e.DepartmentID
-WHERE Name = 'Sales'
-order by EmployeeID asc
