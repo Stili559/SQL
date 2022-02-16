@@ -1,3 +1,0 @@
-SELECT Email from Email
-group by Email
-having count(Email) > 1 
