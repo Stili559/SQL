@@ -1,0 +1,2 @@
+SELECT a.player_id, min(device_id) AS device_id FROM Activity1 a
+GROUP BY a.player_id
