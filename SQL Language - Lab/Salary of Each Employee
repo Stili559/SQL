@@ -1,0 +1,1 @@
+SELECT FirstName, LASTName,Salary FROM Employees
