@@ -1,0 +1,7 @@
+select top(50)FirstName, LastName,t.Name, a.AddressText
+from Employees AS e
+join Addresses AS a
+on a.AddressID = e.AddressID
+join Towns AS t
+on a.TownID = t.TownID
+order by FirstName asc, LastName asc
