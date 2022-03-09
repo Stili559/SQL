@@ -1,0 +1,4 @@
+SELECT * FROM Location as l
+JOIN Volcanoes as v
+ON l.Id = v.LocationId
+WHERE v.Height < 6000
