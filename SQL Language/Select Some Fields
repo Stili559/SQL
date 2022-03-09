@@ -1,0 +1,2 @@
+ SELECT DISTINCT Name FROM Volcanoes
+ WHERE LocationId = 1
