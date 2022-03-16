@@ -1,0 +1,26 @@
+using FindEmployeesWithJobTitlee.Data.Models;
+using System;
+
+namespace FindEmployeesWithJobTitlee
+{
+    class Program
+    {
+        static void Main()
+        {
+            var context = new SoftUniContext();
+            var result = FindEmployeesWithJobTitle(context);
+            Console.WriteLine(result);
+        }
+
+        public static string FindEmployeesWithJobTitle(SoftUniContext context)
+        {
+            var employees = context.Employees
+                  .Where(e => e.JobTitle == "Design Engineer")
+                  .Select(x => x.FirstName)
+                  .ToList();
+
+
+            return string.Join(Environment.NewLine, employees);
+        }
+    }
+}
