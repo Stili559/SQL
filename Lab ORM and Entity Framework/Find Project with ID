@@ -1,0 +1,12 @@
+static void Main()
+{
+    var context = new SoftUniContext();
+    var result = FindProjectWithId(context);
+    Console.WriteLine(result);
+}
+
+public static string FindProjectWithId(SoftUniContext context)
+{
+    var project = context.Projects.Find(2);
+    return project.Name;
+}
