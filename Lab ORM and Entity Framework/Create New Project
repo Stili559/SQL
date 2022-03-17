@@ -1,0 +1,18 @@
+static void Main()
+{
+    var context = new SoftUniContext();
+    var result = CreateNewProjects(context);
+    Console.WriteLine(result);
+}
+
+public static string CreateNewProjects(SoftUniContext context)
+{
+     var project = new Project()
+    {
+      Name = "Our Newest Project",
+      StartDate = newDateTime(2021, 1, 1),
+    };
+
+    context.Projects.Add(project);
+    context.SaveChanges();
+}
